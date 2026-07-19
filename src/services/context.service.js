@@ -1,6 +1,5 @@
 // context.service.js
 
-const path = require('path');
 const stadiumData = require('../data/stadium.json');
 const scheduleData = require('../data/schedule.json');
 
