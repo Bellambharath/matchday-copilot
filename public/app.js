@@ -138,7 +138,7 @@
     messageInput.value = '';
 
     // Add to history
-    history.push({ role: 'user', text: text });
+    history.push({ role: 'user', text });
 
     // Disable input
     setLoading(true);
