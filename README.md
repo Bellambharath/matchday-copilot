@@ -28,7 +28,7 @@ Navigating a 72,000-capacity stadium during a FIFA World Cup match is overwhelmi
 │                 │         │  └──────────────┬───────────────────┘     │
 └─────────────────┘         │                 ▼                         │
                             │  ┌──────────────────────────────────┐     │
-                            │  │  Gemini API (gemini-2.5-flash)  │     │
+                            │  │Gemini API (gemini-3.1-flash-lite)│     │
                             │  │  System prompt with grounding   │     │
                             │  │  data → factual, specific reply │     │
                             │  └──────────────────────────────────┘     │
@@ -62,7 +62,7 @@ Navigating a 72,000-capacity stadium during a FIFA World Cup match is overwhelmi
 
 3. **Context Building** — The context service constructs a system prompt by combining: the assistant's role definition, the full stadium layout and match schedule data (serialized JSON), and a language instruction for the target language.
 
-4. **Gemini Generation** — The system prompt, conversation history, and user message are sent to Gemini 2.5 Flash (temperature 0.4, max 500 tokens). The structured grounding data ensures responses reference real gates, blocks, and facilities.
+4. **Gemini Generation** — The system prompt, conversation history, and user message are sent to Gemini 3.1 Flash-Lite (temperature 0.4, max 500 tokens). The structured grounding data ensures responses reference real gates, blocks, and facilities.
 
 5. **Response Delivery** — The AI reply is returned as JSON. The frontend renders it as text (using `textContent` to prevent XSS) in a chat bubble, maintaining the conversational flow.
 

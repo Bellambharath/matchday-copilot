@@ -39,7 +39,7 @@ async function generateReply(userMessage, systemPrompt, history) {
     });
 
     const response = await ai.models.generateContent({
-      model: 'gemini-3.5-flash',
+      model: 'gemini-3.1-flash-lite',
       contents,
       config: {
         systemInstruction: systemPrompt,
