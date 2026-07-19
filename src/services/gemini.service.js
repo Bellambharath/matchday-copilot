@@ -32,7 +32,7 @@ function isConfigured() {
  * @param {string} userMessage - The current user prompt message.
  * @param {string} systemPrompt - The system prompt containing role and grounding context.
  * @param {Array<Object>} history - Array of previous chat turns.
- * @returns {Promise<Object>} An object containing either the reply string or an error indicator.
+ * @returns {Promise<Object>} Either { reply: string }, { error: true, message: string }, or { configured: false } if the client has no API key.
  */
 async function generateReply(userMessage, systemPrompt, history) {
   if (!ai) {
