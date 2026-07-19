@@ -25,8 +25,49 @@
     es: 'es'
   };
 
+  const CHIP_TEXTS = {
+    en: [
+      "🧭 Find my gate",
+      "♿ Accessible routes",
+      "🍽 Food nearby",
+      "🚨 Emergency help",
+      "🚇 Transit after match",
+      "📅 Today's matches"
+    ],
+    hi: [
+      "🧭 मेरा गेट खोजें",
+      "♿ सुलभ मार्ग",
+      "🍽 आस-पास का भोजन",
+      "🚨 आपातकालीन सहायता",
+      "🚇 मैच के बाद परिवहन",
+      "📅 आज के मैच"
+    ],
+    es: [
+      "🧭 Buscar mi puerta",
+      "♿ Rutas accesibles",
+      "🍽 Comida cercana",
+      "🚨 Ayuda de emergencia",
+      "🚇 Tránsito después del partido",
+      "📅 Partidos de hoy"
+    ]
+  };
+
+  const INPUT_PLACEHOLDERS = {
+    en: "Ask me anything about the stadium...",
+    hi: "स्टेडियम के बारे में कुछ भी पूछें...",
+    es: "Pregúntame cualquier cosa sobre el estadio..."
+  };
+
+  const SEND_BUTTON_TEXTS = {
+    en: "Send",
+    hi: "भेजें",
+    es: "Enviar"
+  };
+
   // Initialize
   function init() {
+    const lang = languageSelect.value;
+    updateUILanguage(lang);
     showWelcomeMessage();
     setupEventListeners();
   }
@@ -34,6 +75,24 @@
   function showWelcomeMessage() {
     const lang = languageSelect.value;
     appendMessage('assistant', WELCOME_MESSAGES[lang] || WELCOME_MESSAGES.en);
+  }
+
+  function updateUILanguage(lang) {
+    // Update HTML lang attribute
+    document.documentElement.lang = LANG_ATTR_MAP[lang] || 'en';
+
+    // Update chips text and data-message
+    const localizedChips = CHIP_TEXTS[lang] || CHIP_TEXTS.en;
+    chips.forEach(function (chip, index) {
+      if (localizedChips[index]) {
+        chip.textContent = localizedChips[index];
+        chip.setAttribute('data-message', localizedChips[index]);
+      }
+    });
+
+    // Update input placeholder and send button text
+    messageInput.placeholder = INPUT_PLACEHOLDERS[lang] || INPUT_PLACEHOLDERS.en;
+    sendButton.textContent = SEND_BUTTON_TEXTS[lang] || SEND_BUTTON_TEXTS.en;
   }
 
   function setupEventListeners() {
@@ -59,9 +118,9 @@
     // Language change
     languageSelect.addEventListener('change', function () {
       const lang = languageSelect.value;
-      document.documentElement.lang = LANG_ATTR_MAP[lang] || 'en';
+      updateUILanguage(lang);
+      
       // Show a language change notification
-      const langNames = { en: 'English', hi: 'हिन्दी', es: 'Español' };
       appendMessage('assistant', lang === 'en'
         ? '🌐 Language changed to English. I\'ll respond in English from now on.'
         : lang === 'hi'
