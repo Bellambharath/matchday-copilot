@@ -1,4 +1,4 @@
-const { buildSystemPrompt, ROLE_PROMPT, LANGUAGE_MAP } = require('../src/services/context.service');
+const { buildSystemPrompt } = require('../src/services/context.service');
 
 describe('Context Service', () => {
   describe('buildSystemPrompt', () => {
