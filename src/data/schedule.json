@@ -1,0 +1,60 @@
+{
+  "tournament": "FIFA World Cup 2026",
+  "venue": "Victoria International Stadium",
+  "matches": [
+    {
+      "matchId": "GS-01",
+      "date": "2026-07-18",
+      "kickoff": "18:00 CDT",
+      "teams": { "home": "Brazil", "away": "Japan" },
+      "group": "Group F",
+      "expectedAttendance": 68000,
+      "status": "Completed"
+    },
+    {
+      "matchId": "GS-02",
+      "date": "2026-07-19",
+      "kickoff": "15:00 CDT",
+      "teams": { "home": "Germany", "away": "Mexico" },
+      "group": "Group E",
+      "expectedAttendance": 72000,
+      "status": "Today"
+    },
+    {
+      "matchId": "GS-03",
+      "date": "2026-07-19",
+      "kickoff": "21:00 CDT",
+      "teams": { "home": "Argentina", "away": "South Korea" },
+      "group": "Group A",
+      "expectedAttendance": 71000,
+      "status": "Today"
+    },
+    {
+      "matchId": "GS-04",
+      "date": "2026-07-20",
+      "kickoff": "14:00 CDT",
+      "teams": { "home": "France", "away": "Nigeria" },
+      "group": "Group D",
+      "expectedAttendance": 65000,
+      "status": "Upcoming"
+    },
+    {
+      "matchId": "GS-05",
+      "date": "2026-07-20",
+      "kickoff": "20:00 CDT",
+      "teams": { "home": "USA", "away": "England" },
+      "group": "Group B",
+      "expectedAttendance": 72000,
+      "status": "Upcoming"
+    },
+    {
+      "matchId": "GS-06",
+      "date": "2026-07-21",
+      "kickoff": "17:00 CDT",
+      "teams": { "home": "Spain", "away": "Australia" },
+      "group": "Group C",
+      "expectedAttendance": 60000,
+      "status": "Upcoming"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "name": "Victoria International Stadium",
+  "location": "Dallas, Texas, USA",
+  "capacity": 72000,
+  "gates": [
+    { "id": "A", "name": "Gate A — North Main", "location": "North side, near Metro Station", "accessible": false, "notes": "Busiest 60–30 min before kickoff. Closest to Sections 101–108." },
+    { "id": "B", "name": "Gate B — North East", "location": "North-East corner", "accessible": true, "notes": "Wheelchair-accessible with ramps and elevators. Closest to Sections 109–116. Accessible drop-off zone nearby." },
+    { "id": "C", "name": "Gate C — East", "location": "East side, near Parking Lot P1", "accessible": false, "notes": "Typically one of the fastest entry gates. Closest to Sections 117–122." },
+    { "id": "D", "name": "Gate D — South Main", "location": "South side, near Bus Terminal", "accessible": false, "notes": "Busiest 60–30 min before kickoff. Closest to Sections 123–130." },
+    { "id": "E", "name": "Gate E — South West", "location": "South-West corner", "accessible": true, "notes": "Wheelchair-accessible with ramps and elevators. Closest to Sections 131–136. Accessible parking in Lot P3." },
+    { "id": "F", "name": "Gate F — West", "location": "West side, near Rideshare Zone", "accessible": false, "notes": "Typically one of the fastest entry gates. Closest to Sections 137–140 and 101–104." }
+  ],
+  "seatingTiers": [
+    { "tier": "Lower Bowl", "blocks": "101–115", "nearestGates": ["A", "B", "C"] },
+    { "tier": "Mid Tier", "blocks": "116–125", "nearestGates": ["C", "D"] },
+    { "tier": "Upper Deck", "blocks": "126–136", "nearestGates": ["D", "E"] },
+    { "tier": "Sky Lounge", "blocks": "137–140", "nearestGates": ["E", "F"] }
+  ],
+  "facilities": {
+    "foodCourts": [
+      { "name": "North Bites", "location": "Level 1, near Gate A", "cuisine": ["Burgers", "Hot Dogs", "Fries"], "options": ["Vegetarian available", "Halal options"], "hours": "Gates open until end of match" },
+      { "name": "East Eats", "location": "Level 2, near Gate C", "cuisine": ["Pizza", "Tacos", "Nachos"], "options": ["Vegetarian available", "Vegan options"], "hours": "Gates open until end of match" },
+      { "name": "Sky Dining", "location": "Level 4, near Gate F", "cuisine": ["Gourmet Sandwiches", "Sushi", "Salads"], "options": ["Vegetarian available", "Halal options", "Gluten-free options"], "hours": "Gates open until 60 min after match" }
+    ],
+    "medicalStations": [
+      { "name": "Medical Station 1", "location": "Level 1, between Gate A and Gate B", "services": "First aid, AED, wheelchair assistance" },
+      { "name": "Medical Station 2", "location": "Level 2, near Gate D", "services": "First aid, AED, wheelchair assistance" }
+    ],
+    "prayerRooms": [
+      { "name": "Prayer Room 1", "location": "Level 1, near Gate B" },
+      { "name": "Prayer Room 2", "location": "Level 2, near Gate C" },
+      { "name": "Prayer Room 3", "location": "Level 3, near Gate E" },
+      { "name": "Prayer Room 4", "location": "Level 4, near Gate F" }
+    ],
+    "restrooms": [
+      { "location": "Level 1, near Gate A", "accessible": false },
+      { "location": "Level 1, near Gate B", "accessible": true },
+      { "location": "Level 2, near Gate C", "accessible": false },
+      { "location": "Level 2, near Gate D", "accessible": true },
+      { "location": "Level 3, near Gate E", "accessible": true },
+      { "location": "Level 4, near Gate F", "accessible": false }
+    ],
+    "waterRefillStations": [
+      { "location": "Level 1, near Gate A" },
+      { "location": "Level 1, near Gate B" },
+      { "location": "Level 2, near Gate C" },
+      { "location": "Level 2, near Gate D" },
+      { "location": "Level 3, near Gate E" },
+      { "location": "Level 4, near Gate F" }
+    ],
+    "lostAndFound": {
+      "location": "Main Concourse, Level 1, near Gate A",
+      "hours": "Opens with gates, closes 90 min after match"
+    }
+  },
+  "transit": {
+    "metro": { "station": "Victoria Park Metro Station", "walkingTime": "5-minute walk from Gate A" },
+    "busRoutes": [
+      { "route": "Route 42", "stop": "Stadium South Bus Stop", "walkingTime": "3-minute walk from Gate D" },
+      { "route": "Route 15", "stop": "Victoria Park East", "walkingTime": "7-minute walk from Gate C" },
+      { "route": "Route 78", "stop": "Stadium West", "walkingTime": "4-minute walk from Gate F" }
+    ],
+    "taxiRideshare": { "zone": "Rideshare Pickup Zone", "location": "West side, 2-minute walk from Gate F" },
+    "parking": [
+      { "lot": "P1", "location": "East side, near Gate C", "notes": "General parking, 5-minute walk" },
+      { "lot": "P2", "location": "South side, near Gate D", "notes": "General parking, 6-minute walk" },
+      { "lot": "P3", "location": "South-West, near Gate E", "notes": "Accessible parking available, 3-minute walk" }
+    ]
+  },
+  "crowdGuidance": {
+    "busiestGates": "Gates A and D are busiest 60–30 minutes before kickoff.",
+    "fastestGates": "Gates C and F are typically the fastest for entry.",
+    "tip": "Arrive at least 90 minutes before kickoff for the smoothest entry experience."
+  }
+}

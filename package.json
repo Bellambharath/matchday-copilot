@@ -1,0 +1,23 @@
+{
+  "name": "matchday-copilot",
+  "version": "1.0.0",
+  "description": "GenAI-enabled stadium assistant for FIFA World Cup 2026",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node src/server.js",
+    "test": "jest --silent"
+  },
+  "keywords": ["genai", "fifa", "world-cup", "stadium-assistant"],
+  "license": "MIT",
+  "dependencies": {
+    "@google/genai": "^1.0.0",
+    "express": "^4.21.0",
+    "express-rate-limit": "^7.4.0",
+    "helmet": "^8.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}
