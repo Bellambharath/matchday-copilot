@@ -57,6 +57,14 @@ html, body {
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
 }
 
+/* Main content wrapper */
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
 /* Header */
 header {
   padding: 16px 20px 12px;
