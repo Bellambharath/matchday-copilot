@@ -1,3 +1,5 @@
+// chat.routes.js
+
 const express = require('express');
 const router = express.Router();
 const { validateChatRequest } = require('../middleware/validate');
