@@ -4,6 +4,7 @@ const { validateChatRequest } = require('../middleware/validate');
 const { chatLimiter } = require('../middleware/rateLimiter');
 const { generateReply, isConfigured } = require('../services/gemini.service');
 const { buildSystemPrompt } = require('../services/context.service');
+const { MAX_HISTORY_TURNS } = require('../config/constants');
 const stadiumData = require('../data/stadium.json');
 
 // GET /api/health
@@ -25,8 +26,8 @@ router.post('/chat', chatLimiter, validateChatRequest, async (req, res) => {
     return res.status(503).json({ error: 'AI service not configured' });
   }
 
-  // Cap history to last 10 turns
-  const cappedHistory = Array.isArray(history) ? history.slice(-10) : [];
+  // Cap history to last configured number of turns
+  const cappedHistory = Array.isArray(history) ? history.slice(-MAX_HISTORY_TURNS) : [];
 
   // Build system prompt with stadium data and language
   const systemPrompt = buildSystemPrompt(language);
