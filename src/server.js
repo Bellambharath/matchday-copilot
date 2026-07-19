@@ -18,6 +18,13 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 // API routes
 app.use('/api', chatRoutes);
 
+// Global error-handling middleware to prevent stack trace leaks
+app.use((err, req, res, next) => {
+  console.error('Unhandled error:', err.message || err);
+  const statusCode = err.status || 500;
+  res.status(statusCode).json({ error: 'Something went wrong. Please try again.' });
+});
+
 // Start server only if this file is run directly (not imported by tests)
 if (require.main === module) {
   app.listen(PORT, () => {
