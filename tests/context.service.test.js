@@ -16,6 +16,8 @@ describe('Context Service', () => {
       expect(prompt).toContain('North Bites');
       expect(prompt).toContain('Medical Station');
       expect(prompt).toContain('Victoria Park Metro Station');
+      expect(prompt).toContain('take the North Ramp');
+      expect(prompt).toContain('take the East Stairs');
     });
 
     it('should include schedule data', () => {

@@ -11,10 +11,30 @@
     { "id": "F", "name": "Gate F — West", "location": "West side, near Rideshare Zone", "accessible": false, "notes": "Typically one of the fastest entry gates. Closest to Sections 137–140 and 101–104." }
   ],
   "seatingTiers": [
-    { "tier": "Lower Bowl", "blocks": "101–115", "nearestGates": ["A", "B", "C"] },
-    { "tier": "Mid Tier", "blocks": "116–125", "nearestGates": ["C", "D"] },
-    { "tier": "Upper Deck", "blocks": "126–136", "nearestGates": ["D", "E"] },
-    { "tier": "Sky Lounge", "blocks": "137–140", "nearestGates": ["E", "F"] }
+    {
+      "tier": "Lower Bowl",
+      "blocks": "101–115",
+      "nearestGates": ["A", "B", "C"],
+      "directions": "From Gate A: take the North Ramp up to Level 1, blocks 101-108 are to the left, 109-115 to the right. From Gate B: take the North-East Stairs to Level 1, blocks 109-115 are to the left. From Gate C: take the East Stairs to Level 1, blocks 111-115 are directly ahead."
+    },
+    {
+      "tier": "Mid Tier",
+      "blocks": "116–125",
+      "nearestGates": ["C", "D"],
+      "directions": "From Gate C: take the East Stairs up to Level 2, blocks 116-120 are to the right, 121-125 to the left. From Gate D: take the South Ramp up to Level 2, blocks 121-125 are to the left, 116-120 to the right."
+    },
+    {
+      "tier": "Upper Deck",
+      "blocks": "126–136",
+      "nearestGates": ["D", "E"],
+      "directions": "From Gate D: take the South Stairs up to Level 3, blocks 126-130 are to the left, 131-136 to the right. From Gate E: take the South-West Ramp up to Level 3, blocks 131-136 are directly to the left."
+    },
+    {
+      "tier": "Sky Lounge",
+      "blocks": "137–140",
+      "nearestGates": ["E", "F"],
+      "directions": "From Gate E: take the South-West Elevator to Level 4, Sky Lounge blocks 137-140 are to the right. From Gate F: take the West Escalator up to Level 4, Sky Lounge blocks 137-140 are directly to the left."
+    }
   ],
   "facilities": {
     "foodCourts": [
