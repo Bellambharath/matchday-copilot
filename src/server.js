@@ -3,6 +3,8 @@ const path = require('path');
 const helmet = require('helmet');
 const chatRoutes = require('./routes/chat.routes');
 
+const { BODY_SIZE_LIMIT } = require('./config/constants');
+
 const app = express();
 const PORT = process.env.PORT || 8080;
 
@@ -12,7 +14,7 @@ app.set('trust proxy', 1);
 app.use(helmet());
 
 // Body parsing with size limit
-app.use(express.json({ limit: '10kb' }));
+app.use(express.json({ limit: BODY_SIZE_LIMIT }));
 
 // Serve static frontend files
 app.use(express.static(path.join(__dirname, '..', 'public')));
