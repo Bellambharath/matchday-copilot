@@ -44,7 +44,10 @@ async function generateReply(userMessage, systemPrompt, history) {
       config: {
         systemInstruction: systemPrompt,
         maxOutputTokens: 500,
-        temperature: 0.4
+        temperature: 0.4,
+        thinkingConfig: {
+          thinkingBudget: 0
+        }
       }
     });
 
